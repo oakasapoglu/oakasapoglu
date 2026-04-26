@@ -1,7 +1,7 @@
 title: "Your Name"
 description: "desc"
 url: "https://oakasapoglu.github.io"
-baseurl: "oakasapoglu"
+baseurl: "/oakasapoglu"
 
 author:
   name: "Your Name"
