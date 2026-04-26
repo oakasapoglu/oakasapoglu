@@ -1,15 +1,27 @@
-title: Fiyonk
-description: My blog
+title: "Your Name"
+description: "desc"
 url: "https://oakasapoglu.github.io"
-baseurl: "/"
+baseurl: "oakasapoglu"
 
-theme: minima
+author:
+  name: "Your Name"
+  email: "you@example.com"
+#  github: "yourusername"
+#  twitter: "yourhandle"
 
+# Build
 markdown: kramdown
-kramdown:
-  input: GFM
+highlighter: rouge
+permalink: /:year/:month/:day/:title/
 
 plugins:
+  - jekyll-org
   - jekyll-feed
-  - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - README.md
