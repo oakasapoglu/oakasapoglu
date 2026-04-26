@@ -1,0 +1,24 @@
+#+TITLE: Hello, World
+#+DATE: 2026-04-25
+#+LAYOUT: post
+#+TAGS: meta
+
+First post. This site runs on Jekyll and GitHub Pages.
+
+The setup is intentionally minimal — no JavaScript, no build step beyond what GitHub handles automatically, just org files and a handful of templates.
+
+* Why Jekyll
+
+It stays out of the way. You write org, push to GitHub, and the site updates. No CI pipeline to maintain, no framework churn.
+
+#+BEGIN_SRC lisp
+(defun greet (name)
+  "Say hello."
+  (format t "Hello, ~a!~%" name))
+#+END_SRC
+
+* Why Org
+
+Because Markdown is impoverished. Org gives you proper structure, =#+INCLUDE=, tables, inline babel blocks, and it lives natively in Emacs.
+
+More to come.

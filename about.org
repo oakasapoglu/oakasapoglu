@@ -1,0 +1,17 @@
+#+TITLE: About
+#+LAYOUT: default
+
+* About
+
+I'm a developer interested in programming languages, systems, and building things that matter.
+
+This is where I write about ideas I'm working through — mostly technical, occasionally not.
+
+** Currently
+
+Working on language tooling, editor integration, and things adjacent to Lisp and Erlang.
+
+** Elsewhere
+
+- [[https://github.com/{{ site.author.github }}][GitHub]]
+- [[mailto:{{ site.author.email }}][Email]]
