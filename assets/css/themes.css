@@ -1,0 +1,169 @@
+[data-theme="dark"] {
+  --bg:      #282a36;
+  --fg:      #f8f8f2;
+  --muted:   #6272a4;
+  --accent:  #ff79c6;
+  --border:  #44475a;
+  --code-bg: #44475a;
+}
+
+[data-theme="monokai"] {
+  --bg:      #272822;
+  --fg:      #f8f8f2;
+  --muted:   #75715e;
+  --accent:  #a6e22e;
+  --border:  #3e3d32;
+  --code-bg: #3e3d32;
+}
+
+[data-theme="tokyo-night"] {
+  --bg:      #1a1b2e;
+  --fg:      #c0caf5;
+  --muted:   #565f89;
+  --accent:  #7aa2f7;
+  --border:  #292e42;
+  --code-bg: #24283b;
+}
+
+[data-theme="henna"] {
+  --bg:      #1a0a00;
+  --fg:      #e8d5b0;
+  --muted:   #8a6a40;
+  --accent:  #c45c00;
+  --border:  #3a1a00;
+  --code-bg: #2a1200;
+}
+
+[data-theme="oceanic"] {
+  --bg:      #1b2b34;
+  --fg:      #cdd3de;
+  --muted:   #65737e;
+  --accent:  #6699cc;
+  --border:  #2b3b44;
+  --code-bg: #243340;
+}
+
+[data-theme="molokai"] {
+  --bg:      #1b1d1e;
+  --fg:      #f8f8f2;
+  --muted:   #75715e;
+  --accent:  #f92672;
+  --border:  #2d2e2e;
+  --code-bg: #272822;
+}
+
+
+
+
+
+
+[data-theme="doom-lantern"] {
+  --bg:      #1a1a1a;
+  --fg:      #f8f8f2;
+  --muted:   #8c8c8c;
+  --accent:  #ff9f43;
+  --border:  #2e2e2e;
+  --code-bg: #252525;
+}
+
+[data-theme="doom-outrun-electric"] {
+  --bg:      #0d0221;
+  --fg:      #f8f8f2;
+  --muted:   #6272a4;
+  --accent:  #ff00ff;
+  --border:  #1a0a3e;
+  --code-bg: #150535;
+}
+
+[data-theme="doom-bluloco-light"] {
+  --bg:      #f9f9f9;
+  --fg:      #383a42;
+  --muted:   #9a9a9a;
+  --accent:  #0098dd;
+  --border:  #e0e0e0;
+  --code-bg: #efefef;
+}
+
+[data-theme="doom-pine"] {
+  --bg:      #0e1415;
+  --fg:      #e4e8e8;
+  --muted:   #4d6464;
+  --accent:  #5ab1bb;
+  --border:  #1a2526;
+  --code-bg: #141e1f;
+}
+
+[data-theme="doom-snazzy"] {
+  --bg:      #282a36;
+  --fg:      #eff0eb;
+  --muted:   #686868;
+  --accent:  #ff6ac1;
+  --border:  #3a3d4d;
+  --code-bg: #313342;
+}
+
+
+
+
+[data-theme="doom-horizon"] {
+  --bg:      #1c1e26;
+  --fg:      #e9e9f4;
+  --muted:   #6c6f93;
+  --accent:  #e95378;
+  --border:  #2e303e;
+  --code-bg: #232530;
+}
+
+[data-theme="doom-peacock"] {
+  --bg:      #121f2e;
+  --fg:      #d6e4f0;
+  --muted:   #4a6b82;
+  --accent:  #00b4d8;
+  --border:  #1a2e40;
+  --code-bg: #162538;
+}
+
+[data-theme="doom-laserwave"] {
+  --bg:      #1a0933;
+  --fg:      #f0d6ff;
+  --muted:   #7b4fa6;
+  --accent:  #eb64b9;
+  --border:  #2d1150;
+  --code-bg: #220d40;
+}
+
+[data-theme="doom-oceanic-next"] {
+  --bg:      #1b2b34;
+  --fg:      #d8dee9;
+  --muted:   #65737e;
+  --accent:  #6699cc;
+  --border:  #2b3b44;
+  --code-bg: #223040;
+}
+
+[data-theme="doom-challenger-deep"] {
+  --bg:      #1b1c2b;
+  --fg:      #cbe1f0;
+  --muted:   #565575;
+  --accent:  #ffb378;
+  --border:  #2a2a3d;
+  --code-bg: #22223a;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

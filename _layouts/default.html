@@ -7,13 +7,124 @@
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 }}">
   {% seo %}
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/themes.css' | relative_url }}">
   <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
 </head>
+
+
+<!-- your content here 
+
+<div id="player" hidden style="position:fixed;bottom:1.5rem;right:1.5rem;background:var(--bg);border:1px solid var(--border);padding:0.75rem 1rem;font-family:var(--font-sans);font-size:0.75rem;display:flex;align-items:center;gap:0.75rem;z-index:999;border-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,0.2);">
+  <button onclick="prev()" title="Previous">⏮</button>
+  <button id="playbtn" onclick="togglePlay()" title="Play">▶️</button>
+  <button onclick="next()" title="Next">⏭</button>
+  <span id="track-name" style="max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--muted);">No track</span>
+  <button onclick="closePlayer()" title="Close">✕</button>
+</div>
+
+
+
+<audio id="audio"></audio>
+
+<script>
+  const tracks = [
+    { name: 'Synthetic Drift',   src: '/oakasapoglu/music/AI-LAB-02 Synthetic Drift.mp4' },
+    { name: 'Circuit Echo',      src: '/oakasapoglu/music/AI-LAB-03 Circuit Echo.mp4' },
+    { name: 'Electric Abyss',    src: '/oakasapoglu/music/AI-LAB-11 Electric Abyss.mp4' },
+    { name: 'Deep Signal',       src: '/oakasapoglu/music/AI-LAB-14 Deep Signal.mp4' },
+    { name: 'Digital Catacombs', src: '/oakasapoglu/music/AI-LAB-18 Digital Catacombs.mp4' },
+    { name: 'Warriyo - Mortals', src: '/oakasapoglu/music/Warriyo Mortals.mp3' },
+  ];
+
+  let idx = 0;
+  const audio = document.getElementById('audio');
+  const btn   = document.getElementById('playbtn');
+  const name  = document.getElementById('track-name');
+
+  function load(i) {
+    idx = (i + tracks.length) % tracks.length;
+    audio.src = tracks[idx].src;
+    name.textContent = '🎵 ' + tracks[idx].name;
+    audio.play();
+    btn.textContent = '⏸';
+  }
+
+  function togglePlay() {
+    if (audio.paused) { audio.play(); btn.textContent = '⏸'; }
+    else              { audio.pause(); btn.textContent = '▶️'; }
+  }
+
+  function prev() { load(idx - 1); }
+  function next() { load(idx + 1); }
+  function closePlayer() { audio.pause(); document.getElementById('player').style.display = 'none'; }
+
+  audio.addEventListener('ended', () => load(idx + 1));
+
+  // start paused on first track
+  audio.src = tracks[0].src;
+  name.textContent = '🎵 ' + tracks[0].name;
+</script>
+
+
+-->
+
+<script>
+  // const themes = ['light', 'dark', 'dracula', 'monokai', 'tokyo-night', 'henna', 'oceanic', 'molokai'];
+  // const icons  = ['☀️', '🌙', '🧛', '🎨', '🌃', '🌿', '🌊', '🖤'];
+
+const themes = [
+  'light',
+  'dark',
+  'dracula',
+  'monokai',
+  'tokyo-night',
+  'henna',
+  'oceanic',
+  'molokai',
+  'doom-lantern',
+  'doom-outrun-electric',
+  'doom-bluloco-light',
+  'doom-pine',
+  'doom-snazzy',
+  'doom-horizon',
+  'doom-peacock',
+  'doom-laserwave',
+  'doom-oceanic-next',
+  'doom-challenger-deep'
+];
+
+const icons = ['☀️','🌙','🧛','🎨','🌃','🌿','🌊','🖤','🏮','⚡','💙','🌲','✨','🌅','🦚','🌈','🐚','🌌'];
+
+
+
+
+  function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme') || 'light';
+    const idx = (themes.indexOf(current) + 1) % themes.length;
+    setTheme(idx);
+  }
+
+  function setTheme(idx) {
+    document.documentElement.setAttribute('data-theme', themes[idx]);
+    localStorage.setItem('theme', themes[idx]);
+    document.getElementById('theme-toggle').textContent = icons[idx];
+  }
+
+  const saved = localStorage.getItem('theme') || 'light';
+  const savedIdx = themes.indexOf(saved);
+  document.documentElement.setAttribute('data-theme', saved);
+  document.addEventListener('DOMContentLoaded', () => setTheme(savedIdx));
+</script>
+
+
+
 <body>
   <header class="site-header">
     <nav class="nav">
       <a class="nav-logo" href="{{ '/' | relative_url }}">{{ site.title }}</a>
       <ul class="nav-links">
+        
+        <li><button id="theme-toggle" onclick="toggleTheme()">☀️</button></li>
         <li><a href="{{ '/' | relative_url }}">Home</a></li>
         <li><a href="{{ '/writing/' | relative_url }}">Writing</a></li>
         <li><a href="{{ '/about/' | relative_url }}">About</a></li>
