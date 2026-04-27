@@ -20,6 +20,9 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
+whitelist:
+  - jekyll-org
+
 exclude:
   - Gemfile
   - Gemfile.lock
