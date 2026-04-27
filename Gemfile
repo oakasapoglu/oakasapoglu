@@ -4,6 +4,8 @@ source "https://rubygems.org"
 # gem "github-pages", group: :jekyll_plugins
 # gem "jekyll-org"
 
+# [[https://github.com/eggcaker/jekyll-org][jekyll-org/Gemfile at master · eggcaker/jekyll-org]]
+
 gem 'ffi', '1.15.5'
 
 gem 'jekyll' , '3.9.5'
