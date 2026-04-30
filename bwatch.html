@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ws-render</title>
+</head>
+<body>
+  <iframe id="frame" style="border:none; width:100vw; height:100vh;"></iframe>
+
+  <script>
+    const frame = document.getElementById('frame');
+    const ws = new WebSocket('wss://corporate-barley-footboard.ngrok-free.dev');
+
+    ws.onopen    = () => console.log('connected');
+    ws.onclose   = () => console.log('disconnected');
+    ws.onerror   = (e) => console.error('error', e);
+    ws.onmessage = (e) => {
+      const data = JSON.parse(e.data);
+      let html = data.result;
+
+      // result is a Lisp-printed string: starts and ends with "
+      // JSON.parse will unescape it properly
+      try { html = JSON.parse(html); } catch {}
+
+      console.log('rendering html:', html.slice(0, 80));
+      const blob = new Blob([html], { type: 'text/html' });
+      frame.src  = URL.createObjectURL(blob);
+    };
+  </script>
+</body>
+</html>
