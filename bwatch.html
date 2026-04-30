@@ -14,6 +14,26 @@
     ws.onopen    = () => console.log('connected');
     ws.onclose   = () => console.log('disconnected');
     ws.onerror   = (e) => console.error('error', e);
+
+
+    ws.onmessage = (e) => {
+	const data = JSON.parse(e.data);
+	let html = data.result;
+	// strip outer Lisp quotes and unescape
+	html = html.slice(1, -1)
+            .replace(/\\"/g, '"')
+            .replace(/\\n/g, '\n')
+            .replace(/\\\\/g, '\\');
+	
+	const doc = frame.contentDocument || frame.contentWindow.document;
+	doc.open();
+	doc.write(html);
+	doc.close();
+    };
+    
+    
+
+/*
     ws.onmessage = (e) => {
       const data = JSON.parse(e.data);
       let html = data.result;
@@ -26,6 +46,8 @@
       const blob = new Blob([html], { type: 'text/html' });
       frame.src  = URL.createObjectURL(blob);
     };
+*/
+    
   </script>
 </body>
 </html>
