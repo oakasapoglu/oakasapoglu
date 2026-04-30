@@ -1,13 +1,13 @@
-title: "Your Name"
+title:       "Ömer Abdülaziz Kasapoğlu"
 description: "desc"
 url: "https://oakasapoglu.github.io"
 baseurl: "/oakasapoglu"
 
 author:
-  name: "Your Name"
-  email: "you@example.com"
-#  github: "yourusername"
-#  twitter: "yourhandle"
+  name:    "Ömer Abdülaziz Kasapoğlu"
+  email:   "oakasapoglu@gmail.com"
+  github:  "oakasapoglu"
+  twitter: "oakasapoglu"
 
 # Build
 markdown: kramdown

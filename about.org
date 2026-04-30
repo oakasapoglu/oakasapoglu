@@ -18,8 +18,6 @@ Working on language tooling, editor integration, and things adjacent to Lisp and
 
 
 ** Is he live?
-
-
 * My WebSocket Thing
 
 #+BEGIN_EXPORT html

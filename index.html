@@ -5,11 +5,17 @@ title: Home
 <div class="page-intro">
   <h1>{{ site.title }}</h1>
   <p>{{ site.description }}</p>
-  <a href="wwatch.html">Go to Watch Page</a>
   <div class="embed-container">
+      <p>Here is my running stream if i am at my desk.</p>
+      <p>If it says Disconnected, that means, I am not streaming now.</p>
+      <p>If it says, Connected, you should be seeing a description of what I am currently doing on my PC.</p>
+      
+      <a href="wwatch.html">Go to the Watch Page itself.</a>
       <iframe src="wwatch.html" width="100%" height="250px" style="border:1px solid #ccc;"></iframe>
   </div>
 </div>
+
+<h4>Here are my posts.</h4>
 
 <ul class="post-list">
   {% for post in site.posts %}

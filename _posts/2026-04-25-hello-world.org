@@ -3,6 +3,11 @@
 #+LAYOUT: post
 #+TAGS: meta
 
+
+This is something that Claude had written you can ignore it.
+But i will write about that topic later for sure.
+I will put the link down below.
+
 First post. This site runs on Jekyll and GitHub Pages.
 
 The setup is intentionally minimal — no JavaScript, no build step beyond what GitHub handles automatically, just org files and a handful of templates.
